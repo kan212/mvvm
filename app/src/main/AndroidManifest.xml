@@ -22,9 +22,6 @@
         <activity android:name=".inject.SecondActivity">
 
         </activity>
-        <activity android:name=".Test2" >
-
-        </activity>
     </application>
 
 </manifest>

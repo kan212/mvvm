@@ -3,7 +3,6 @@ package com.ihandy.mvvm
 import android.os.Bundle
 import com.ihandy.mvvm.base.BaseActivity
 import com.ihandy.mvvm.databinding.ActivityMainBinding
-import com.ihandy.mvvm.inject.SecondActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>() {
 

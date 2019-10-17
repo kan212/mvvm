@@ -7,15 +7,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
-import com.ihandy.mvvm.App.Companion.modelFactory
-import com.ihandy.mvvm.MainViewModel
-import com.ihandy.mvvm.R
+import com.ihandy.mvvm.obtainViewModel
 
 abstract class BaseActivity<VB : ViewDataBinding, VM :BaseViewModel> : AppCompatActivity() {
 
     val viewModel by lazy {
-        ViewModelProviders.of(this, modelFactory).get(getBaseViewModel()::class.java)
+        obtainViewModel(getBaseViewModel())
     }
+
 
      val mBinding: VB by lazy{
            DataBindingUtil.setContentView<VB>(this,getLayoutId())

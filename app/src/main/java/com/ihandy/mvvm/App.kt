@@ -11,14 +11,8 @@ import org.koin.core.context.startKoin
 class App : Application(){
 
 
-    companion object{
-        var _context : Application? = null
-        val modelFactory = _context?.let { BaseModelFactory(context = it) }
-    }
-
     override fun onCreate() {
         super.onCreate()
-        _context = this
         startKoin {
             androidContext(this@App)
             androidLogger()
