@@ -5,20 +5,18 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
 import com.ihandy.mvvm.obtainViewModel
 
-abstract class BaseActivity<VB : ViewDataBinding, VM :BaseViewModel> : AppCompatActivity() {
+abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity() {
 
     val viewModel by lazy {
         obtainViewModel(getBaseViewModel())
     }
 
 
-     val mBinding: VB by lazy{
-           DataBindingUtil.setContentView<VB>(this,getLayoutId())
-     }
+    val mBinding: VB by lazy {
+        DataBindingUtil.setContentView<VB>(this, getLayoutId())
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
