@@ -13,6 +13,6 @@ class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding.model = viewModel
-        viewModel.title.set("fuck the world")
+        viewModel.title.set("test for extends")
     }
 }

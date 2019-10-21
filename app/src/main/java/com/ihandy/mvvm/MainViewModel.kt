@@ -1,6 +1,8 @@
 package com.ihandy.mvvm
 
 import androidx.databinding.ObservableField
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.ihandy.mvvm.base.BaseViewModel
 
 class MainViewModel : BaseViewModel(){
@@ -8,4 +10,8 @@ class MainViewModel : BaseViewModel(){
     init {
         title.set("TOOO")
     }
+    private val _likes =  MutableLiveData(1)
+
+    var likes: LiveData<Int> = _likes
+
 }

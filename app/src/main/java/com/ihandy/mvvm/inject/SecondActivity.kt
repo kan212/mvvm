@@ -18,11 +18,10 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var b = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        b.second = viewModule
+        b.secondModel = viewModule
         b.model =mainViewModule
-        mainViewModule.title.set("second")
-        viewModule.title.postValue("hh")
-        viewModule.title2.value = "ioji"
-
+//        mainViewModule.title.set("second")
+//        viewModule.title.postValue("hh")
+//        viewModule.title2.postValue(viewModule.meet())
     }
 }
