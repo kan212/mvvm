@@ -11,6 +11,11 @@
         <variable
             name="secondModel"
             type="com.ihandy.mvvm.inject.SecondViewModule" />
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -56,6 +61,7 @@
             android:max="@{100}"
             app:progressScaled="@{model.likes}"
             app:hideIfZero="@{model.likes}"
+            android:onClick="@{listener}"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@+id/third"
             app:layout_constraintLeft_toLeftOf="parent"

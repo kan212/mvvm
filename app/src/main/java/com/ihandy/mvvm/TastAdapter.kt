@@ -7,8 +7,7 @@ import com.ihandy.mvvm.base.BaseActivity
 import com.ihandy.mvvm.base.BaseAdapter
 
 class TastAdapter(context: Context) : BaseAdapter<ArrayList<LiveData<*>>, ViewDataBinding>(context) {
-
-    override fun onBindItem(item: LiveData<*>, binding: ViewDataBinding) {
+    override fun onBindItem(t: ArrayList<LiveData<*>>, binding: ViewDataBinding) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

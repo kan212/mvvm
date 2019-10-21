@@ -17,7 +17,7 @@ abstract class BaseFragment<VB : ViewDataBinding, VM : BaseViewModel> : Fragment
     }
 
     val mBinding: VB by lazy {
-        DataBindingUtil.inflate(layoutInflater,getLayoutId(),null,false)
+        DataBindingUtil.inflate<VB>(layoutInflater,getLayoutId(),null,false)
     }
 
     override fun onCreateView(

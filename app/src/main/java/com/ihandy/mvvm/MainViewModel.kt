@@ -6,15 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ihandy.mvvm.base.BaseViewModel
 
-class MainViewModel : BaseViewModel() ,Observable{
-
-    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class MainViewModel : BaseViewModel() {
 
     var title = ObservableField<String>()
     init {
@@ -24,4 +16,7 @@ class MainViewModel : BaseViewModel() ,Observable{
 
     var likes: LiveData<Int> = _likes
 
+    fun onlick(){
+        _likes.value = 12
+    }
 }

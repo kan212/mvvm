@@ -14,7 +14,7 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
     }
 
 
-    val mBinding: VB by lazy {
+    val mBinding by lazy {
         DataBindingUtil.setContentView<VB>(this, getLayoutId())
     }
 
