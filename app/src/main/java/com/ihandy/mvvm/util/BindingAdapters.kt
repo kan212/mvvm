@@ -6,13 +6,14 @@ import androidx.databinding.BindingAdapter
 
 object BindingAdapters {
 
-    @BindingAdapter(value = ["app:progressScaled", "android:max"], requireAll = true)
+    @BindingAdapter(value = ["progressScaled", "android:max"], requireAll = true)
     @JvmStatic fun setProgress(progressBar: ProgressBar, likes: Int, max: Int) {
         progressBar.progress = (likes * max / 5).coerceAtMost(max)
     }
 
-    @BindingAdapter("app:hideIfZero")
+    @BindingAdapter("hideIfZero")
     @JvmStatic fun hideIfZero(view: View, number: Int) {
         view.visibility = if (number == 0) View.GONE else View.VISIBLE
     }
+
 }
