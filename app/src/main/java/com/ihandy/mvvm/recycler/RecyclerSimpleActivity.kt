@@ -21,5 +21,7 @@ class RecyclerSimpleActivity : BaseActivity<ActivityRecyclerSimpleBinding, Recyc
 
         mBinding.recyclerView.adapter = adapter
         mBinding.recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val data = viewModel.recyclerRepository.netService.getArticles(0)
     }
 }

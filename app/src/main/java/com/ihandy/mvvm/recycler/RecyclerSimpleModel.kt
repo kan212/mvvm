@@ -1,10 +1,15 @@
 package com.ihandy.mvvm.recycler
 
-import androidx.lifecycle.ViewModel
 import com.ihandy.mvvm.base.BaseViewModel
+import javax.inject.Inject
 
-class RecyclerSimpleModel :BaseViewModel(){
+class RecyclerSimpleModel : BaseViewModel() {
 
-    var data : MutableList<String> = arrayOf("1","2","3","1","2","3","1","2","3","1","2","3").toMutableList()
+    @Inject
+    lateinit var recyclerRepository: RecyclerRepository
+
+    var data: MutableList<String> =
+        arrayOf("1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3").toMutableList()
+
 
 }
